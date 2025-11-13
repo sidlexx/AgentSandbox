@@ -1,0 +1,95 @@
+BUILD: AI-Powered Agent Training Sandbox Application
+
+CONTEXT: Create a fully functional web application that uses AI to personalize call center agent training, reducing onboarding time from 6 weeks to 3 weeks through adaptive learning and real-scenario simulations.
+
+TECH STACK: React + TypeScript + Tailwind CSS + Node.js + PostgreSQL + Claude/GPT API integration
+
+COLOR SCHEME: Primary:#4A90E2, Secondary:#7B68EE, Success:#52C41A, Warning:#FAAD14, Background:#F0F2F5
+
+NAVIGATION ARCHITECTURE:
+- Top Nav: Dashboard | Training Modules | Live Simulation | Analytics | Knowledge Base
+- Each page has 3-4 functional subsections with left sidebar navigation
+
+PAGE SPECIFICATIONS WITH MANDATORY FUNCTIONALITY:
+
+1. DASHBOARD
+   - Real-time progress circle (0-100% completion)
+   - Today's learning path with 3 recommended modules
+   - Performance trend chart (last 7 days)
+   - Quick-start simulation button → launches actual scenario
+
+2. ONBOARDING WIZARD (First-time users)
+   - Step 1: Experience assessment (10 questions) → generates skill level 1-10
+   - Step 2: Learning style quiz (VAK test) → determines content format
+   - Step 3: Role selection → customizes training modules
+   - AI analyzes inputs → creates personalized 30-day training path
+
+3. TRAINING MODULES
+   - Skill tree visualization with locked/unlocked nodes
+   - Each module: Video + Interactive quiz + Practice simulation
+   - Progress saves automatically
+   - Adaptive difficulty: If score <70%, easier content; >90%, skip ahead
+
+4. LIVE SIMULATION ROOM
+   - Customer chat interface with AI-generated personas
+   - Difficulty selector: Beginner (password reset) | Intermediate (complaint) | Advanced (crisis)
+   - Real-time feedback panel: Sentiment meter + Response timer + Hint system
+   - Post-simulation report: Score + Mistakes + Recommendations
+
+5. ANALYTICS
+   - Individual metrics: Accuracy %, Handle time, Learning velocity
+   - Peer comparison chart (anonymized)
+   - AI prediction: "Ready for production in X days"
+   - Export PDF report functionality
+
+6. KNOWLEDGE BASE
+   - AI-powered search that understands natural language
+   - Auto-generated FAQ from common simulation errors
+   - Decision tree builder for troubleshooting guides
+   - Embedded AI chatbot for instant help
+
+CORE AI FUNCTIONALITIES (MUST WORK):
+1. Personalization Engine:
+```
+   analyzeProfile() → generateCustomPath() → adjustDifficulty() → predictReadiness()
+```
+
+2. Simulation Engine:
+```
+   generateScenario() → analyzeResponse() → provideFeedback() → adaptNextScenario()
+```
+
+3. Performance Tracker:
+```
+   collectMetrics() → compareToBaseline() → identifyGaps() → recommendInterventions()
+```
+
+GAMIFICATION:
+- XP points for completion (10-100 per task)
+- Badges: "First Perfect Score", "7-Day Streak", "Peer Helper"
+- Leaderboard: Updates live, shows top 10
+- Progress animations on achievement unlock
+
+DATA FLOW:
+- User action → API call → Database update → UI refresh
+- All buttons functional: No placeholder alerts
+- Forms submit and save data
+- Charts pull real metrics
+- Search returns actual results
+
+CRITICAL REQUIREMENTS:
+1. Every button must trigger a real action
+2. All forms must validate and save data
+3. Simulations must be interactive, not videos
+4. Analytics must calculate from actual performance data
+5. AI recommendations must be personalized based on user data
+6. Include smooth transitions between pages (0.3s slide)
+7. Responsive design for desktop and tablet
+8. Session persistence (user returns to where they left)
+9. Error handling with user-friendly messages
+10. Loading states for all async operations
+
+SAMPLE USER JOURNEY:
+New Agent → Onboarding (15 min) → Assigned 5 beginner modules → Complete first module → Practice simulation → See performance → Get AI recommendation → Next module (harder/easier based on performance) → Daily progress tracked → Production-ready in 21 days
+
+DELIVERABLE: Complete application with all pages functional, AI integration working, and every interactive element performing its stated purpose. No decorative-only components.
